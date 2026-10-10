@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8g6m4147uhro" path="res://scenes/Player.tscn" id="1_elqb8"]
 [ext_resource type="Texture2D" uid="uid://bettpx3vy2nm4" path="res://assets/art/icon.svg" id="1_rvslj"]
+[ext_resource type="Script" path="res://scenes/dialogue.gd" id="3_0bbpv"]
 
 [node name="Main" type="Node" unique_id=1482057672]
 
@@ -11,3 +12,15 @@ scale = Vector2(23.070314, 14.671875)
 texture = ExtResource("1_rvslj")
 
 [node name="CharacterBody2D" parent="." unique_id=1861419166 instance=ExtResource("1_elqb8")]
+
+[node name="Control" type="Control" parent="." unique_id=915147072]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 468.50006
+offset_top = 390.0
+offset_right = 508.50006
+offset_bottom = 430.0
+
+[node name="DialogueNode" type="Node2D" parent="." unique_id=902915363]
+position = Vector2(468.50006, 390)
+script = ExtResource("3_0bbpv")
