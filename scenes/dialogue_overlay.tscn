@@ -66,6 +66,7 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 482.0
 offset_bottom = 180.0
+alignment = 1
 
 [node name="MadTalkRuntime" type="Node" parent="." unique_id=2127828774]
 script = ExtResource("2_dh0qe")
