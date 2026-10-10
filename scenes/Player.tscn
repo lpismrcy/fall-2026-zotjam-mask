@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bettpx3vy2nm4" path="res://assets/art/icon.svg" id="2_3li8b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 45.0
+height = 150.0
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_g4v7s"]
 points = PackedVector2Array(200, -80, 200, 80, 0, 0)
@@ -11,11 +13,11 @@ points = PackedVector2Array(200, -80, 200, 80, 0, 0)
 [node name="PlayerController" type="CharacterBody2D" unique_id=1861419166]
 script = ExtResource("1_v6fml")
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1089800866]
-shape = SubResource("CapsuleShape2D_g4v7s")
-
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=951768103]
 texture = ExtResource("2_3li8b")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1089800866]
+shape = SubResource("CapsuleShape2D_g4v7s")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1948885877]
 
