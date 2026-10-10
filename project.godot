@@ -15,10 +15,18 @@ run/main_scene="uid://cok8umbyeckie"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/art/icon.svg"
 
+[autoload]
+
+MadTalkGlobals="*uid://domdph40m3s8i"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/madtalk/plugin.cfg")
 
 [input]
 
