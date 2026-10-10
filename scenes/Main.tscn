@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://kitjvugp7jdf" path="res://scripts/dialogue.gd" id="3_0bbpv"]
 [ext_resource type="Script" uid="uid://dax666j42iw2l" path="res://scripts/camera.gd" id="4_vcsgt"]
 [ext_resource type="Script" uid="uid://yt4osn3uaebq" path="res://scripts/room.gd" id="5_c01mt"]
+[ext_resource type="PackedScene" uid="uid://dntmb1lybdymg" path="res://scenes/npc.tscn" id="6_npc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kur6e"]
 
@@ -72,3 +73,7 @@ scale = Vector2(70, 70)
 shape = SubResource("RectangleShape2D_v4udn")
 
 [node name="Lockpoint" type="Node2D" parent="Room3" unique_id=1194402368]
+
+[node name="NPC" parent="." unique_id=2068594920 instance=ExtResource("6_npc")]
+position = Vector2(-218, -150)
+dialog_id = "1_start_here"

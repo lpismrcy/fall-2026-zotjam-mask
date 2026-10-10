@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cxidonmrthcrg"]
+
+[ext_resource type="Script" uid="uid://5oaqvqdovm4g" path="res://scenes/dialogue_overlay.gd" id="1_0pfuj"]
+[ext_resource type="Texture2D" uid="uid://bettpx3vy2nm4" path="res://assets/art/icon.svg" id="1_t5kwb"]
+[ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="2_dh0qe"]
+
+[node name="DialogueOverlay" type="Control" unique_id=1751266484]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0pfuj")
+
+[node name="MadTalkRuntime" type="Node" parent="." unique_id=2127828774]
+script = ExtResource("2_dh0qe")
+DialogMainControl = NodePath("../CanvasLayer/MarginContainer")
+DialogMessageBox = NodePath("../CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins/TextBoxPanel")
+DialogMessageLabel = NodePath("../CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins/TextBoxPanel/RichTextLabel")
+DialogButtonsMenu = NodePath("../CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel")
+DialogButtonsContainer = NodePath("../CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel/ButtonContainer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=622600937]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1326842280]
+anchors_preset = -1
+anchor_top = 0.7222222
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer" unique_id=688735928]
+layout_mode = 2
+
+[node name="WholePanelHBox" type="HBoxContainer" parent="CanvasLayer/MarginContainer/PanelContainer" unique_id=766554661]
+layout_mode = 2
+
+[node name="TextureMargins" type="MarginContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox" unique_id=166921975]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/TextureMargins" unique_id=953960388]
+layout_mode = 2
+texture = ExtResource("1_t5kwb")
+expand_mode = 2
+
+[node name="DialogueMargins" type="MarginContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox" unique_id=1285872903]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins" unique_id=1479026301]
+layout_mode = 2
+
+[node name="TextMargins" type="MarginContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer" unique_id=1814051513]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextBoxPanel" type="Panel" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins" unique_id=688861796]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins/TextBoxPanel" unique_id=1961858511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+fit_content = true
+
+[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer" unique_id=1135838135]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonPanel" type="Panel" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins" unique_id=463073254]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel" unique_id=1410580881]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[connection signal="dialog_aborted" from="MadTalkRuntime" to="." method="_on_mad_talk_runtime_dialog_finished"]
+[connection signal="dialog_finished" from="MadTalkRuntime" to="." method="_on_mad_talk_runtime_dialog_finished"]

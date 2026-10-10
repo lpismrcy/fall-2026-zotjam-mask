@@ -28,6 +28,7 @@ connected_to_id = 8
 [sub_resource type="Resource" id="6"]
 script = ExtResource("3_dways")
 text = "No"
+connected_to_id = 6
 
 [sub_resource type="Resource" id="2"]
 script = ExtResource("4_f2ijm")
@@ -50,7 +51,7 @@ message_text = "my_var was set to: <<my_var>>
 [sub_resource type="Resource" id="Resource_ixt6j"]
 script = ExtResource("4_f2ijm")
 sequence_id = 6
-position = Vector2(1000, 80)
+position = Vector2(1100, 460)
 items = [SubResource("v4udn"), SubResource("Resource_jrxya")]
 continue_port_index = 0
 
@@ -77,8 +78,9 @@ effect_type = 0
 [sub_resource type="Resource" id="Resource_j2kw6"]
 script = ExtResource("4_f2ijm")
 sequence_id = 8
-position = Vector2(720, 620)
+position = Vector2(540, 0)
 items = [SubResource("7"), SubResource("8"), SubResource("9")]
+continue_sequence_id = 6
 continue_port_index = 0
 
 [sub_resource type="Resource" id="3"]
