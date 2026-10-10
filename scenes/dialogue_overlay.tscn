@@ -67,20 +67,10 @@ layout_mode = 0
 offset_right = 482.0
 offset_bottom = 180.0
 
-[node name="YesButton" type="Button" parent="MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel/ButtonContainer" unique_id=2035775524]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Yes"
-
-[node name="NoButton" type="Button" parent="MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel/ButtonContainer" unique_id=453017029]
-layout_mode = 2
-size_flags_vertical = 3
-text = " No"
-
 [node name="MadTalkRuntime" type="Node" parent="." unique_id=2127828774]
 script = ExtResource("2_dh0qe")
 DialogMainControl = NodePath("..")
-DialogMessageBox = NodePath("../MarginContainer/PanelContainer")
+DialogMessageBox = NodePath("../MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins/TextBoxPanel")
 DialogMessageLabel = NodePath("../MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/TextMargins/TextBoxPanel/RichTextLabel")
 DialogButtonsMenu = NodePath("../MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel")
 DialogButtonsContainer = NodePath("../MarginContainer/PanelContainer/WholePanelHBox/DialogueMargins/HBoxContainer/ButtonMargins/ButtonPanel/ButtonContainer")
