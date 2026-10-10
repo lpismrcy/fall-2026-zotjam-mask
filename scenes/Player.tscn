@@ -28,4 +28,5 @@ shape = SubResource("CapsuleShape2D_g4v7s")
 shape = SubResource("ConvexPolygonShape2D_g4v7s")
 
 [node name="DialogueOverlay" parent="." unique_id=1751266484 instance=ExtResource("3_3li8b")]
-script = null
+
+[connection signal="dialog_finished" from="DialogueOverlay" to="." method="_on_dialogue_overlay_dialog_finished"]

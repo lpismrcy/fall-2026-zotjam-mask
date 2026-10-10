@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8g6m4147uhro" path="res://scenes/Player.tscn" id="1_elqb8"]
 [ext_resource type="Texture2D" uid="uid://bettpx3vy2nm4" path="res://assets/art/icon.svg" id="1_rvslj"]
-[ext_resource type="Script" path="res://scenes/dialogue.gd" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://dntmb1lybdymg" path="res://scenes/npc.tscn" id="3_0bbpv"]
 
 [node name="Main" type="Node" unique_id=1482057672]
 
@@ -23,4 +23,7 @@ offset_bottom = 430.0
 
 [node name="DialogueNode" type="Node2D" parent="." unique_id=902915363]
 position = Vector2(468.50006, 390)
-script = ExtResource("3_0bbpv")
+
+[node name="NPC" parent="." unique_id=2068594920 instance=ExtResource("3_0bbpv")]
+position = Vector2(-218, -150)
+dialog_id = "1_start_here"
