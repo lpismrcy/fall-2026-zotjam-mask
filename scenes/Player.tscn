@@ -5,13 +5,21 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1861419166]
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_g4v7s"]
+points = PackedVector2Array(200, -80, 200, 80, 0, 0)
+
+[node name="PlayerController" type="CharacterBody2D" unique_id=1861419166]
 script = ExtResource("1_v6fml")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1089800866]
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1089800866]
 shape = SubResource("CapsuleShape2D_g4v7s")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=951768103]
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=951768103]
 texture = ExtResource("2_3li8b")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1948885877]
+
+[node name="PlayerInteractionRange" type="Area2D" parent="." unique_id=1458584272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteractionRange" unique_id=932928415]
+shape = SubResource("ConvexPolygonShape2D_g4v7s")
