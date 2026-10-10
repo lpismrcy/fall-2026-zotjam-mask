@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxidonmrthcrg"]
 
-[ext_resource type="Script" uid="uid://5oaqvqdovm4g" path="res://scenes/dialogue_overlay.gd" id="1_0pfuj"]
+[ext_resource type="Script" uid="uid://5oaqvqdovm4g" path="res://scripts/dialogue_overlay.gd" id="1_0pfuj"]
 [ext_resource type="Texture2D" uid="uid://bettpx3vy2nm4" path="res://assets/art/icon.svg" id="1_t5kwb"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="2_dh0qe"]
 
@@ -24,6 +24,7 @@ DialogButtonsContainer = NodePath("../CanvasLayer/MarginContainer/PanelContainer
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=622600937]
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1326842280]
+visible = false
 anchors_preset = -1
 anchor_top = 0.7222222
 anchor_right = 1.0
